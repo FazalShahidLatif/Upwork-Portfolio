@@ -1,0 +1,42 @@
+{
+  "report_title": "EA Backtesting Report — Walk-Forward Analysis",
+  "ea_name": "TrendFollowingEA_v2.5",
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "test_period": "2024.01.01-2024.12.31",
+  "initial_deposit": 10000,
+  "leverage": 100,
+  "walk_forward": {
+    "folds": 5,
+    "in_sample": {
+      "period": "2024.01.01-2024.06.30",
+      "total_trades": 128,
+      "win_rate": 51.6,
+      "profit_factor": 1.72,
+      "max_drawdown_pct": 12.8,
+      "expectancy": 38.50,
+      "sharpe_ratio": 1.35
+    },
+    "out_of_sample": {
+      "period": "2024.07.01-2024.12.31",
+      "total_trades": 117,
+      "win_rate": 48.7,
+      "profit_factor": 1.58,
+      "max_drawdown_pct": 15.2,
+      "expectancy": 35.20,
+      "sharpe_ratio": 1.18
+    },
+    "stability_score": 82,
+    "overfitting_risk": "Low"
+  },
+  "monte_carlo": {
+    "simulations": 1000,
+    "confidence_95": {
+      "max_drawdown": 26.8,
+      "min_profit": -850,
+      "max_profit": 8200
+    },
+    "probability_of_profit": 78.5
+  },
+  "conclusion": "Strategy shows consistent performance across in-sample and out-of-sample periods. Low overfitting risk. Suitable for live trading with proper risk management."
+}
